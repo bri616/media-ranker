@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "/movies",      to: "movies#show",  as: :movies
   get "/movies/new",  to: "movies#new",   as: :new_movie
-  
+  post "/movies",     to: "movies#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
