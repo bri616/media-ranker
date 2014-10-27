@@ -1,1 +1,9 @@
-Show all the movies here
+<h1>All Movies</h1>
+
+<ul>
+<% @movies.each do |movie| %>
+  <li><%= movie.title %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add New Movie", new_movie_path %>
