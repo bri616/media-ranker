@@ -9,9 +9,16 @@ class MoviesController < ApplicationController
   end
 
   def edit
+    @movie = Movie.find(params.require(:id))
   end
 
   def update
+    @movie = Movie.find(params.require(:id))
+    if @movie.update(movie_params)
+      redirect_to movie_path
+    else
+      render :edit
+    end
   end
 
   def new
