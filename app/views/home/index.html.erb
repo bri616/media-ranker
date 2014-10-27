@@ -1,0 +1,12 @@
+<div class="movies">
+  <h1>Top Movies</h2>
+  <div class="movie">
+  <% @movies.each do |movie| %>
+    <span class="movie-title"><%= movie.title %></span>
+    <span class="ranking">Ranked: <%= movie.ranking %></span>
+  <% end %>
+  </div>
+  <!-- /class movie   -->
+  <%= link_to "View More Movies", movies_path %>
+</div>
+<!-- /class movie -->
