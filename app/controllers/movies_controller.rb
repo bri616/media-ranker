@@ -1,10 +1,11 @@
 class MoviesController < ApplicationController
   # index, show, edit, update, new, create, destroy
   def index
+    @movies = Movie.all
   end
 
   def show
-    @movies = Movie.all
+    @movie = Movie.find(params.require(:id))
   end
 
   def edit

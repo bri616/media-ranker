@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   # MOVIES
 
-  get "/movies",      to: "movies#show",  as: :movies
-  get "/movies/new",  to: "movies#new",   as: :new_movie
+  get "/movies",      to: "movies#index",   as: :movies
   post "/movies",     to: "movies#create"
+  get "/movies/:id",  to: "movies#show",    as: :movie
+  get "/movies/new",  to: "movies#new",     as: :new_movie
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

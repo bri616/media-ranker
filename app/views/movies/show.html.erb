@@ -1,18 +1,15 @@
-<h1>All Movies</h1>
+<h1><%= @movie.name %></h1>
+<h2>Directed by: <%= @movie.director %></h2>
+<div class=description>
+  <%= @movie.description %>
+</div>
+<div class="upvote-button">
+  UPVOTE BUTTON
+</div>
 
-<table>
-  <tr>
-    <td>Ranking</td>
-    <td>Name</td>
-    <td>Upvote</td>
-  </tr>
-  <% @movies.each do |movie| %>
-  <tr>
-    <td>Ranking: <%= movie.rank %></td>
-    <td><%= movie.name %></td>
-    <td>Upvote Button</td>
-  </tr>
-  <% end %>
-</table>
-
-<%= link_to "Add New Movie", new_movie_path %>
+<div class="other-buttons">
+<span class="edit-button">EDIT BUTTON</span>
+<span class="delete-button">DELETE BUTTON</span>
+<span class="view-all-movies">VIEW ALL MOVIES</span>
+<span class="view-everything">VIEW EVERYTHING</span>
+</div>

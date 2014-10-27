@@ -1,0 +1,18 @@
+<h1>All Movies</h1>
+
+<table>
+  <tr>
+    <td>Ranking</td>
+    <td>Name</td>
+    <td>Upvote</td>
+  </tr>
+  <% @movies.each do |movie| %>
+  <tr>
+    <td>Ranking: <%= movie.rank %></td>
+    <td><%= movie.name %></td>
+    <td>Upvote Button</td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Add New Movie", new_movie_path %>
