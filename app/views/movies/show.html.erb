@@ -9,7 +9,7 @@
 
 <div class="other-buttons">
 <span class="edit-button"><%= link_to "Edit #{@movie.name}", [:edit, @movie] %></span>
-<span class="delete-button">DELETE BUTTON</span>
+<span class="delete-button"><%= button_to "Delete", [:destroy, @movie]  %></span>
 <span class="view-all-movies">VIEW ALL MOVIES</span>
 <span class="view-everything">VIEW EVERYTHING</span>
 </div>

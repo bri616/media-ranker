@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get   "/movies/:id",      to: "movies#show",    as: :movie
   get   "/movies/new",      to: "movies#new",     as: :new_movie
   get   "/movies/:id/edit", to: "movies#edit",    as: :edit_movie
-  patch  "/movies/:id",      to: "movies#update"
+  patch "/movies/:id",      to: "movies#update"
+  post  "/movies/:id",      to: "movies#destroy",  as: :destroy_movie
 
 
   # The priority is based upon order of creation: first created -> highest priority.
