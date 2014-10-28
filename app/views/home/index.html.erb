@@ -1,12 +1,22 @@
-<div class="movies">
-  <h1>Top Movies</h2>
-  <% @movies.each do |movie| %>
-  <div class="movie">
-    <span class="movie-title"><%= link_to "#{movie.name}", movie %></span>
-    <span class="ranking">Ranked: <%= movie.rank %></span>
-  </div>
-  <% end %>
-  <!-- /class movie   -->
-  <%= link_to "View More Movies", movies_path %>
-</div>
-<!-- /class movie -->
+<div class="row">
+  <div class="movies col-sm-4">
+    <h1>Top Movies</h2>
+      <% @movies.each do |movie| %>
+      <div class="movie">
+        <span class="movie-title"><%= link_to "#{movie.name}", movie %></span>
+        <span class="ranking">Ranked: <%= movie.rank %></span>
+      </div><!-- /class movie   -->
+      <% end %>
+      <%= link_to "View More Movies", movies_path %>
+  </div><!-- /class movies col -->
+  <div class="music col-sm-4">
+    <h1>Top Music</h2>
+
+  </div><!-- /class music col -->
+
+  <div class="beer col-sm-4">
+    <h1>Top Beer</h2>
+
+  </div><!-- /class beer col -->
+
+</div><!-- /row -->
