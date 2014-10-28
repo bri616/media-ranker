@@ -3,10 +3,7 @@
 <div class=description>
   <%= @movie.description %>
 </div>
-<div class="upvote-button">
-  UPVOTE BUTTON
-</div>
-
+<%= render "/shared/upvote_button", movie: @movie %>
 <div class="other-buttons">
 <span class="edit-button"><%= link_to "Edit #{@movie.name}", [:edit, @movie] %></span>
 <%= button_to "Delete", [:destroy, @movie], :class => "btn btn-danger" %>
