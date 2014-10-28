@@ -2,8 +2,8 @@
   <h1>Top Movies</h2>
   <div class="movie">
   <% @movies.each do |movie| %>
-    <span class="movie-title"><%= movie.title %></span>
-    <span class="ranking">Ranked: <%= movie.ranking %></span>
+    <span class="movie-title"><%= movie.name %></span>
+    <span class="ranking">Ranked: <%= movie.rank %></span>
   <% end %>
   </div>
   <!-- /class movie   -->
