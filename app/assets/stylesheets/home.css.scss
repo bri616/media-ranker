@@ -15,7 +15,8 @@
   // font-family: 'Permanent Marker', cursive;
   font-family: 'Press Start 2P', cursive;
   letter-spacing: 5px;
-  color: #6a2a81;
+  color: #7f44a7;
+  border-left: 5px solid white;
 }
 
 .brand h2{
@@ -24,4 +25,12 @@
 
 .header {
   border-bottom: 2px solid #6a2a81;
+}
+
+@media(max-width: 480px) {
+  .brand h1 {
+    font-size: 15pt;
+    letter-spacing: 2px;
+    bottom: -15px;
+  }
 }
