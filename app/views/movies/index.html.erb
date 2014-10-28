@@ -11,9 +11,13 @@
     <td>Ranking: <%= movie.rank %></td>
     <!-- I googled the link_to stuff below and it works but it seems v magical -->
     <td><%= link_to "#{movie.name}", movie %></td>
-    <td><%= button_to "Upvote", upvote_path(movie) %></td>
+    <td>
+      <%= button_to upvote_path(movie), :class => "btn btn-default btn-md" do %>
+        <span class="glyphicon glyphicon-thumbs-up"></span>
+      <% end %>
+    </td>
   </tr>
   <% end %>
 </table>
 
-<%= link_to "Add New Movie", new_movie_path %>
+<%= link_to "Add New Movie", new_movie_path, :class => "btn btn-info" %>
