@@ -1,0 +1,27 @@
+.header {
+  position: relative;
+}
+.brand {
+  background-image: url('alien-monster.png');
+  background-repeat: no-repeat;
+  // position: relative;
+  // background-position: 1px 5px;
+}
+.brand h1{
+  position: relative;
+  left: 50px;
+  bottom: -5px;
+  font-size: 30pt;
+  // font-family: 'Permanent Marker', cursive;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 5px;
+  color: #6a2a81;
+}
+
+.brand h2{
+  font-size: 12pt;
+}
+
+.header {
+  border-bottom: 2px solid #6a2a81;
+}
