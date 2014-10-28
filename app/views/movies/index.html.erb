@@ -11,7 +11,7 @@
     <td>Ranking: <%= movie.rank %></td>
     <!-- I googled the link_to stuff below and it works but it seems v magical -->
     <td><%= link_to "#{movie.name}", movie %></td>
-    <td>Upvote Button</td>
+    <td><%= button_to "Upvote", upvote_path(movie) %></td>
   </tr>
   <% end %>
 </table>

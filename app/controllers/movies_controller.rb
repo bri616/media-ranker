@@ -38,7 +38,17 @@ class MoviesController < ApplicationController
     if @movie.destroy
       redirect_to movies_path
     else
-      redirect_to movie_path
+      render :show
+    end
+  end
+
+  def upvote
+    @movie = Movie.find(params.require(:id))
+    @movie.add_one_vote
+    if @movie.save
+      redirect_to movies_path
+    else
+      raise "ERROR"
     end
   end
 
@@ -46,5 +56,8 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:name,:description,:director)
+  end
+
+  def current_movie
   end
 end
