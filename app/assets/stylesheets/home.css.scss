@@ -1,3 +1,12 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h2 {
+  color: grey;
+  font-weight: bold;
+}
+
 .header {
   position: relative;
 }
@@ -21,13 +30,15 @@
 
 .brand h2{
   font-size: 12pt;
+  font-weight: bold;
+  color: grey;
 }
 
 .header {
-  border-bottom: 2px solid #6a2a81;
+  border-bottom: 2px solid #7f44a7;
 }
 
-@media(max-width: 480px) {
+@media(max-width: 550px) {
   .brand h1 {
     font-size: 15pt;
     letter-spacing: 2px;
