@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
 
   def edit
     @movie = Movie.find(params.require(:id))
+    render :template => "/shared/edit_new", :locals => { :obj => @movie, :person_att => "Director" }
   end
 
   def update
@@ -17,19 +18,20 @@ class MoviesController < ApplicationController
     if @movie.update(movie_params)
       redirect_to movie_path
     else
-      render :edit
+      render :template => "/shared/edit_new", :locals => { :obj => @movie, :person_att => "Director" }
     end
   end
 
   def new
     @movie = Movie.new
+    render :template => "/shared/edit_new", :locals => { :obj => @movie, :person_att => "Director" }
   end
 
   def create
     if Movie.create(movie_params)
       redirect_to movies_path
     else
-      render :new
+      render :template => "/shared/edit_new", :locals => { :obj => @movie, :person_att => "Director" }
     end
   end
 
