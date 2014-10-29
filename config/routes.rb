@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   # MOVIES
 
-  get   "/movies",          to: "movies#index",   as: :movies
-  post  "/movies",          to: "movies#create"
-  get   "/movies/new",      to: "movies#new",     as: :new_movie
-  get   "/movies/:id",      to: "movies#show",    as: :movie
-  get   "/movies/:id/edit", to: "movies#edit",    as: :edit_movie
-  patch "/movies/:id",      to: "movies#update"
-  post  "/movies/:id",      to: "movies#destroy",  as: :destroy_movie
+  get   "/movies",            to: "movies#index",   as: :movies
+  post  "/movies",            to: "movies#create"
+  get   "/movies/new",        to: "movies#new",     as: :new_movie
+  get   "/movies/:id",        to: "movies#show",    as: :movie
+  get   "/movies/:id/edit",   to: "movies#edit",    as: :edit_movie
+  patch "/movies/:id",        to: "movies#update"
+  post  "/movies/:id",        to: "movies#destroy", as: :destroy_movie
   post  "/movies/:id/upvote", to: "movies#upvote",  as: :upvote
 
 
