@@ -4,7 +4,7 @@
       <% @movies.each do |movie| %>
       <div class="movie">
         <span class="movie-title"><%= link_to "#{movie.name}", movie %></span>
-        <span class="ranking">Ranked: <%= movie.rank %></span>
+        <span class="votes">Votes: <%= movie.votes %></span>
       </div><!-- /class movie   -->
       <% end %>
       <%= link_to "view more movies...", movies_path, :class=>"more" %>
