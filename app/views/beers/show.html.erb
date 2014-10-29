@@ -1,0 +1,25 @@
+<h1><%= @beer.name %></h1>
+<h2>Brewery: <%= @beer.attributed_to %></h2>
+<div class=description>
+  <%= @beer.description %>
+</div>
+<div class="row">
+  <div class="col-xs-2">
+  Votes: <%= @beer.votes %>
+  </div>
+  <div class="col-xs-10">
+
+  </div>
+</div>
+<div class="btn-group">
+  <%= link_to upvote_beer_path(@beer), {:method => "POST", :class => "btn btn-default btn-md"} do %>
+    <span class="glyphicon glyphicon-thumbs-up"></span>
+  <% end %>
+  <%= link_to "Delete", beer_path(@beer), {:method => "DELETE", :class => "btn btn-default"} %>
+  <%= link_to "Edit #{@beer.name}", edit_beer_path(@beer), :class => "btn btn-default" %>
+</div>
+<div class="other-buttons">
+
+<span class="view-all"><%= link_to "View All Beers", beers_path %></span>
+<span class="view-everything"><%= link_to "View Everything", root_path %></span>
+</div>

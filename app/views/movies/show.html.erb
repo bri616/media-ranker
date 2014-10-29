@@ -1,8 +1,10 @@
 <h1><%= @movie.name %></h1>
 <h2>Directed by: <%= @movie.attributed_to %></h2>
+
 <div class=description>
   <%= @movie.description %>
 </div>
+
 <div class="row">
   <div class="col-xs-2">
   Votes: <%= @movie.votes %>
@@ -11,13 +13,16 @@
 
   </div>
 </div>
+
 <div class="btn-group">
-  <%= render "/shared/upvote_button", movie: @movie %>
+  <%= link_to upvote_movie_path(@movie), {:method => "POST", :class => "btn btn-default btn-md"} do %>
+    <span class="glyphicon glyphicon-thumbs-up"></span>
+  <% end %>
   <%= link_to "Delete", movie_path(@movie), {:method => "DELETE", :class => "btn btn-default"} %>
   <%= link_to "Edit #{@movie.name}", edit_movie_path(@movie), :class => "btn btn-default" %>
 </div>
-<div class="other-buttons">
 
+<div class="other-buttons">
 <span class="view-all-movies"><%= link_to "View All Movies", movies_path %></span>
 <span class="view-everything"><%= link_to "View Everything", root_path %></span>
 </div>

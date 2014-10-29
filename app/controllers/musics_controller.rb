@@ -1,7 +1,7 @@
 class MusicsController < ApplicationController
   # index, show, edit, update, new, create, destroy
   def index
-    @musics = Music.all
+    @musics = Music.sorted_by_votes
   end
 
   def show

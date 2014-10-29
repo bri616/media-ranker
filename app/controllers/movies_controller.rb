@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   # index, show, edit, update, new, create, destroy
   def index
-    @movies = Movie.all
+    @movies = Movie.sorted_by_votes
   end
 
   def show
