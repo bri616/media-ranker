@@ -1,0 +1,6 @@
+<% objs.each do |obj| %>
+<div class="top-ten-list">
+  <span class="obj-name"><%= link_to "#{obj.name}", obj %></span>
+  <span class="obj-votes">Votes: <%= obj.votes %></span>
+</div><!-- /class top-ten-list   -->
+<% end %>

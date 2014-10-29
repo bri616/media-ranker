@@ -1,0 +1,21 @@
+<h2>Musics</h2>
+
+<table class="table-hover table-responsive col-sm-12">
+  <tr>
+    <td>Votes</td>
+    <td>Album Name</td>
+    <td>Upvote</td>
+  </tr>
+  <% @musics.each do |music| %>
+  <tr>
+    <td>Votes: <%= music.votes %></td>
+    <!-- I googled the link_to stuff below and it works but it seems v magical -->
+    <td><%= link_to "#{music.name}", music %></td>
+    <td><%= link_to upvote_music_path(music), {:method => "POST", :class => "btn btn-default btn-md"} do %>
+      <span class="glyphicon glyphicon-thumbs-up"></span>
+    <% end %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Add New Music", new_movie_path, :class => "btn btn-info" %>

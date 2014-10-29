@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "home#index"
-  # resources :movies
+  resources :musics, :beers
 
   # MOVIES
 
@@ -16,7 +16,15 @@ Rails.application.routes.draw do
 
   get     "/movies/:id/edit",   to: "movies#edit",    as: :edit_movie
 
-  post    "/movies/:id/upvote", to: "movies#upvote",  as: :upvote
+  post    "/movies/:id/upvote", to: "movies#upvote",  as: :upvote_movie
+
+  # MUSICS
+
+  post    "/musics/:id/upvote", to: "musics#upvote",  as: :upvote_music
+
+  # BEERS
+
+  post    "/beers/:id/upvote", to: "beers#upvote",  as: :upvote_beer
 
 
   # The priority is based upon order of creation: first created -> highest priority.
