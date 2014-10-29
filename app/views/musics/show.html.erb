@@ -12,14 +12,14 @@
   </div>
 </div>
 <div class="btn-group">
-  <%= link_to upvote_music_path(music), {:method => "POST", :class => "btn btn-default btn-md"} do %>
+  <%= link_to upvote_music_path(@music), {:method => "POST", :class => "btn btn-default btn-md"} do %>
     <span class="glyphicon glyphicon-thumbs-up"></span>
   <% end %>
   <%= link_to "Delete", music_path(@music), {:method => "DELETE", :class => "btn btn-default"} %>
-  <%= link_to "Edit #{@music.name}", edit_movie_path(@music), :class => "btn btn-default" %>
+  <%= link_to "Edit #{@music.name}", edit_music_path(@music), :class => "btn btn-default" %>
 </div>
 <div class="other-buttons">
 
-<span class="view-all-movies"><%= link_to "View All Musics", movies_path %></span>
+<span class="view-all"><%= link_to "View All Musics", musics_path %></span>
 <span class="view-everything"><%= link_to "View Everything", root_path %></span>
 </div>
