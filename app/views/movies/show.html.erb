@@ -1,5 +1,5 @@
 <h1><%= @movie.name %></h1>
-<h2>Directed by: <%= @movie.director %></h2>
+<h2>Directed by: <%= @movie.attributed_to %></h2>
 <div class=description>
   <%= @movie.description %>
 </div>
@@ -13,8 +13,8 @@
 </div>
 <div class="btn-group">
   <%= render "/shared/upvote_button", movie: @movie %>
-  <%= link_to "Delete", destroy_movie_path(@movie), {:method => "POST", :class => "btn btn-default"} %>
-  <%= link_to "Edit #{@movie.name}", [:edit, @movie], :class => "btn btn-default" %>
+  <%= link_to "Delete", movie_path(@movie), {:method => "DELETE", :class => "btn btn-default"} %>
+  <%= link_to "Edit #{@movie.name}", edit_movie_path(@movie), :class => "btn btn-default" %>
 </div>
 <div class="other-buttons">
 
