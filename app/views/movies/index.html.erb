@@ -8,7 +8,7 @@
   </tr>
   <% @movies.each do |movie| %>
   <tr>
-    <td>Votes: <%= movie.votes %></td>
+    <td><%= movie.votes %></td>
     <!-- I googled the link_to stuff below and it works but it seems v magical -->
     <td><%= link_to "#{movie.name}", movie %></td>
     <td><%= link_to upvote_movie_path(movie), {:method => "POST", :class => "btn btn-default btn-md"} do %>

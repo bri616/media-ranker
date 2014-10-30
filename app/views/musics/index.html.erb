@@ -8,7 +8,7 @@
   </tr>
   <% @musics.each do |music| %>
   <tr>
-    <td>Votes: <%= music.votes %></td>
+    <td><%= music.votes %></td>
     <!-- I googled the link_to stuff below and it works but it seems v magical -->
     <td><%= link_to "#{music.name}", music %></td>
     <td><%= link_to upvote_music_path(music), {:method => "POST", :class => "btn btn-default btn-md"} do %>
