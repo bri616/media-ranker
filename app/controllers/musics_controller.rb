@@ -48,7 +48,7 @@ class MusicsController < ApplicationController
     @music = Music.find(params.require(:id))
     @music.add_one_vote
     if @music.save
-      redirect_to musics_path
+      redirect_to request.referer
     else
       raise "ERROR"
     end

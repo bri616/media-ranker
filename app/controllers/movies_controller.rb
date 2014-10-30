@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
     find_movie
     @movie.add_one_vote
     if @movie.save
-      redirect_to movies_path
+      redirect_to request.referer
     else
       raise "ERROR"
     end

@@ -48,7 +48,7 @@ class BeersController < ApplicationController
     @beer = Beer.find(params.require(:id))
     @beer.add_one_vote
     if @beer.save
-      redirect_to beers_path
+      redirect_to request.referer
     else
       raise "ERROR"
     end
