@@ -5,16 +5,16 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params.require(:id))
+    find_movie
   end
 
   def edit
-    @movie = Movie.find(params.require(:id))
+    find_movie
     render :template => "/shared/edit_new", :locals => { :obj => @movie, :person_att => "Director" }
   end
 
   def update
-    @movie = Movie.find(params.require(:id))
+    find_movie
     if @movie.update(movie_params)
       redirect_to movie_path
     else
@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params.require(:id))
+    find_movie
     if @movie.destroy
       redirect_to movies_path
     else
@@ -45,7 +45,7 @@ class MoviesController < ApplicationController
   end
 
   def upvote
-    @movie = Movie.find(params.require(:id))
+    find_movie
     @movie.add_one_vote
     if @movie.save
       redirect_to movies_path
@@ -60,6 +60,7 @@ class MoviesController < ApplicationController
     params.require(:movie).permit(:name,:description,:attributed_to)
   end
 
-  def current_movie
+  def find_movie
+    @movie = Movie.find(params.require(:id))
   end
 end
