@@ -15,8 +15,8 @@ class MusicsController < ApplicationController
 
   def update
     @music = Music.find(params.require(:id))
-    if @music.update(movie_params)
-      redirect_to movie_path
+    if @music.update(music_params)
+      redirect_to music_path
     else
       render :template => "/shared/edit_new", :locals => { :obj => @music, :person_att => "Artist" }
     end

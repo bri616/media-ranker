@@ -15,8 +15,8 @@ class BeersController < ApplicationController
 
   def update
     @beer = Beer.find(params.require(:id))
-    if @beer.update(movie_params)
-      redirect_to movie_path
+    if @beer.update(beer_params)
+      redirect_to beer_path
     else
       render :template => "/shared/edit_new", :locals => { :obj => @beer, :person_att => "Brewery" }
     end
