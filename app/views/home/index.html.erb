@@ -2,18 +2,45 @@
   <div class="movies col-sm-4">
     <h2>Movies</h2>
       <%= render "shared/top_ten_list", :objs=>@movies %>
-      <%= link_to "view more movies...", movies_path, :class=>"more" %>
+      <div class="btn-group">
+      <%= link_to movies_path, :class=>"btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-facetime-video"></span>
+        view more
+      <% end %>
+      <%= link_to new_movie_path, :class => "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+        add new
+      <% end %>
+    </div>
   </div><!-- /class movies col -->
   <div class="music col-sm-4">
     <h2>Musics</h2>
       <%= render "shared/top_ten_list", :objs=>@musics %>
-      <%= link_to "view more musics...", musics_path, :class=>"more" %>
+      <div class="btn-group">
+      <%= link_to musics_path, :class=>"btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-headphones"></span>
+      view more
+      <% end %>
+      <%= link_to new_music_path, :class => "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-plus"></span>
+      add new
+      <% end %>
+      </div>
   </div><!-- /class music col -->
 
   <div class="beer col-sm-4">
     <h2>Beers</h2>
       <%= render "shared/top_ten_list", :objs=>@beers %>
-      <%= link_to "view more beers...", beers_path, :class=>"more" %>
+      <div class="btn-group">
+      <%= link_to beers_path, :class=>"btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-heart"></span>
+      view more
+      <% end %>
+      <%= link_to new_beer_path, :class => "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-plus"></span>
+      add new
+      <% end %>
+      </div>
   </div><!-- /class beer col -->
 
 </div><!-- /row -->
